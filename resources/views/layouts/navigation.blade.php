@@ -28,8 +28,6 @@
 
                 @endauth
 
-
-
             </div>
 
             <!-- Settings Dropdown -->

@@ -36,5 +36,24 @@
             <h2 class=" text-2xl font-bold mb-5">Descripción del Puesto</h2>
             <p>{{$vacante->descripcion}}</p>
         </div>
+
     </div>
+
+
+        @guest
+        <div class="mt-5 bg-gray-50 border-dashed p-5 text-center">
+            <p>¿Deseas aplicar a esta vacante
+                <a class=" font-bold text-indigo-600" href="{{ route('register') }}">Obten una cuenta y aplica a esta y otras vacantes</a>
+            </p>
+        </div>
+        @endguest
+
+        @cannot('create', app\Models\Vacante::class)
+
+            <livewire:postular-vacante :vacante="$vacante"/>
+
+        @endcannot
+
+
+
 </div>
