@@ -11,17 +11,25 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h1 class="my-10 text-2xl font-bold text-center">Mis Notificaciones</h1>
 
-                    @forelse ($noticaciones as $noticacion)
+                    @forelse ($notificaciones as $notificacion)
+                        <div class="p-5 border border-gray-200 flex justify-between items-center">
+                            <div>
+                                <p>Tienes un nuevo candidato en:
+                                    <span class="font-bold ">{{ $notificacion->data['nombre_vacante'] }}</span>
+                                </p>
+                                <p>
+                                    <span class="font-bold ">{{ $notificacion->created_at->diffForHumans() }}</span>
+                                </p>
+                            </div>
 
-                    <div class="p-5 border border-gray-200">
-                        <p>Tienes un nuevo candidato en:
-                            <span class="font-bold ">{{ $notificacion->data['nombre_vacante'] }}</span>
-                        </p>
-                    </div>
+                            <div>
+                                <a href="">Ver Candidatos</a>
+                            </div>
+                        </div>
                     @empty
-                    <p class=" text-center text-gray-600">
-                        No hay notificaciones Nuevas
-                    </p>
+                        <p class=" text-center text-gray-600">
+                            No hay notificaciones Nuevas
+                        </p>
                     @endforelse
 
                 </div>

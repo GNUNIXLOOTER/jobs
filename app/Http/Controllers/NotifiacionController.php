@@ -13,7 +13,7 @@ class NotifiacionController extends Controller
     {
         $notificaciones = auth()->user()->unreadNotifications;
 
-        return view('notificationes.index', [
+        return view('notificaciones.index', [
             'notificaciones' => $notificaciones,
         ]);
     }
