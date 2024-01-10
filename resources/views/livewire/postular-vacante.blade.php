@@ -1,8 +1,7 @@
 <div class="flex flex-col items-center justify-center p-5 mt-10 bg-gray-100 ">
     <h3 class="my-4 text-2xl font-bold text-center ">Postularme a esta vacante</h3>
-
     @if (session()->has('mensaje'))
-        <p class=" uppercase border-green-600 bg-green-100 text-green-600 font-bold p-2 my-5 text-sm rounded-lg">
+        <p class="p-2 my-5 text-sm font-bold text-green-600 uppercase bg-green-100 border-green-600 rounded-lg ">
             {{ session('mensaje') }}
         </p>
 
