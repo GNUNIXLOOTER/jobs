@@ -12,7 +12,7 @@
                     <h1 class="my-10 text-2xl font-bold text-center">Mis Notificaciones</h1>
 
                     @forelse ($notificaciones as $notificacion)
-                        <div class="p-5 border border-gray-200 flex justify-between items-center">
+                        <div class="p-5 border border-gray-200 lg:flex lg:justify-between items-center">
                             <div>
                                 <p>Tienes un nuevo candidato en:
                                     <span class="font-bold ">{{ $notificacion->data['nombre_vacante'] }}</span>
@@ -22,8 +22,8 @@
                                 </p>
                             </div>
 
-                            <div>
-                                <a href="">Ver Candidatos</a>
+                            <div class=" mt-5 lg:mt-0">
+                                <a href="" class=" bg-indigo-500 p-3 text-sm uppercase font-bold text-white rounded-lg">Ver Candidatos</a>
                             </div>
                         </div>
                     @empty
